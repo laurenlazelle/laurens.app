@@ -1,0 +1,34 @@
+﻿@model AnimalModel
+
+<h2>Animals and People</h2>
+
+<div class="container"> 
+    <form asp_controller="Animals" asp_action="Index" method="post">
+        <div class="form-group">
+            <label for="OwnerName" class="control-label">Owners Name</label>
+            <input type="text" id="OwnersName" name="OwnersName" placeholder="owners name" class="form-control" asp-for="OwnersName">
+        </div>
+        <div class="form-group">
+            <!-- Radio group !-->
+            <label class="control-label">Pick animal Type</label>
+            <div class="radio">
+                <label>
+                    <input asp-for="DogOrCat" type="radio"  value="dog">
+                    Dog
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" asp-for="DogOrCat" value="cat">
+                    Cat
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="PetsName" class="control-label">Pets Name</label>
+            <input type="text" id="AnimalsName" name="AnimalsName" placeholder="pets name" class="form-control"  asp-for="AnimalsName">
+        </div>
+        <button type="submit">submit</button>
+    </form>
+    
+</div>
